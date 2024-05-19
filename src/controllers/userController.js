@@ -5,9 +5,9 @@ const createUser = async (req, res) => {
     const { email } = req.body;
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!email || !emailRegex.test(email)) {
         logger.error(`Invalid email ${email} address`)
-        return res.status(400).json({ message: `Invalid email ${email} address` });
+        return res.status(400).json({ message: `Invalid email address` });
     }
 
     try {
