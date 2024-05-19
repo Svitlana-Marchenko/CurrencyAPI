@@ -13,6 +13,10 @@ Exchange Rate API: https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursi
 - **Logger**: Includes logging info (add an email, send emails, get rate (debug only)) to file `application.log` and console
 - **Test**: Includes test `app.test.js`
 
+## Note
+- File `.env` was added only in order to transfer the necessary settings to run the project in Docker. These variables would be changed soon. For general usage please write your own ``.env`` file as ``.env.example``
+- File `application.log` was added only to show the example of the program`s logs written by the logger.
+
 ## API Endpoints
 ### Get Current Exchange Rate
 - **Endpoint**: /api/rate
@@ -39,8 +43,4 @@ docker-compose up --build
 ```
 in the terminal from the root catalog.
 
-If you have any troubles with permissions, just try to write ``sudo docker-compose up --build``
-
-## Note
-- File `.env` was added only in order to transfer the necessary settings to run the project in Docker. These variables would be changed soon. For general usage please write your own ``.env`` file as ``.env.example``
-- File `application.log` was added only to show the program logs written by the logger.
+If you have any troubles with permissions, just try to write ``sudo docker-compose up --build`` (Linux or MacOS)
