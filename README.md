@@ -34,12 +34,11 @@ Exchange Rate API: https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursi
 ## Run
 To run the program try to write 
 ```
-docker build -t currency-api-app .
-docker run -p 3000:3000 currency-api-app
+docker-compose up --build
 ```
 in the terminal from the root catalog.
 
-If you have any troubles, just try to start data base independently (from docker-compose file) and manually run command ``npm run start:migrate`` in the terminal
+If you have any troubles with permissions, just try to write ``sudo docker-compose up --build``
 
 ## Note
 - File `.env` was added only in order to transfer the necessary settings to run the project in Docker. These variables would be changed soon. For general usage please write your own ``.env`` file as ``.env.example``
